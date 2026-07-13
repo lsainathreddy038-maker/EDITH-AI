@@ -1,0 +1,34 @@
+class Commands:
+
+    def hello(self, user):
+        print(f"EDITH: Hello {user}!")
+
+    def help(self):
+        print("""
+Available Commands
+------------------
+hello
+time
+date
+help
+exit
+""")class Notes:
+
+    def save_note(self):
+
+        note = input("Write note: ")
+
+        with open("data/notes.txt", "a") as file:
+            file.write(note + "\n")
+
+        print("Note saved.")
+class Calculator:
+
+    def calculate(self):
+        expression = input("Enter calculation: ")
+
+        try:
+            answer = eval(expression)
+            print("Answer:", answer)
+        except:
+            print("Invalid calculation.")
